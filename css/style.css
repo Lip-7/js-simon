@@ -3,6 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-image: url(../img/chasy-vremya-fon-3277.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+h1,h2,span {
+    text-shadow: 0px 0px 10px black;
+}
 
 /* play button */
 .play-button {
@@ -38,6 +47,11 @@ span.correct{
 }
 span.wrong{
     color: red;
+}
+input{
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
 }
 /* /main-game */
 

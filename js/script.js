@@ -6,14 +6,20 @@ document.getElementById('btn-start').addEventListener('click', () => {
     for (let number of pcNumbers){
         generateElementsByArray('span', number, numsPlace)
     }
-    setInterval(() => {
-        if (timer > 0) {
-            timer--
-            document.getElementById('counter').innerText = timer
-        }
-    }, 1000);
+    const countdown = setInterval(() => timing(timer, countdown), 1000)
     setTimeout(() => {
         switchVisibility('startGame', 'main-game');
     }, 10000);
     guessingTime(pcNumbers);
 });
+
+function timing(timer, intervallName) {
+    let counter = timer -1
+    if (counter > 23) {
+        document.getElementById('counter').innerText = counter
+        counter--
+    } else {
+        clearInterval(intervallName)
+    }
+    console.log(counter)
+}
