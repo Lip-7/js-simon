@@ -23,13 +23,3 @@ document.getElementById('btn-start').addEventListener('click', () => {
     })
     guessingTime(pcNumbers);
 });
-function timing(timer, intervallName) {
-    let counter = timer -1
-    if (counter > 23) {
-        document.getElementById('counter').innerText = counter
-        counter--
-    } else {
-        clearInterval(intervallName)
-    }
-    console.log(counter)
-}
