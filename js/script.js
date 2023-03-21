@@ -16,7 +16,7 @@ document.getElementById('btn-start').addEventListener('click', () => {
     }, 1000)
     const switchTimer = setTimeout(() => {
         switchVisibility('startGame', 'main-game');
-    }, 10000);
+    }, 30000);
     document.getElementById('timerReady').addEventListener('click', () => {
         switchVisibility('startGame', 'main-game');
         clearTimeout(switchTimer)
