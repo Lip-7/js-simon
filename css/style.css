@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* play button */
+.play-button {
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+.play-button i {
+    transform: translate(-50%, -50%);
+    font-size: 6rem;
+    animation: pulse 2s infinite;
+}
+.play-icon {
+    background-image: linear-gradient(to top, red, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+/* /play button */
+
+/* startGame */
+#game p span{
+    font-size: 4rem;
+}
+/* /startGame */
+
+
+/* animations */
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+@keyframes bliniking {
+    0% {color: black;}
+    25% {color: transparent;}
+    50% {color: black;}
+   75% {color: transparent;}
+   100% {color: black;}
+}
