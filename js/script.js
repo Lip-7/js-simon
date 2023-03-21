@@ -6,8 +6,14 @@ document.getElementById('btn-start').addEventListener('click', () => {
     for (let number of pcNumbers){
         generateElementsByArray('span', number, numsPlace)
     }
+    setInterval(() => {
+        if (timer > 0) {
+            timer--
+            document.getElementById('counter').innerText = timer
+        }
+    }, 1000);
     setTimeout(() => {
         switchVisibility('startGame', 'main-game');
-    }, 1000);
+    }, 10000);
     guessingTime(pcNumbers);
 });
