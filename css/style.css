@@ -32,6 +32,14 @@
 }
 /* /startGame */
 
+/* main-game */
+span.correct{
+    color: green;
+}
+span.wrong{
+    color: red;
+}
+/* /main-game */
 
 /* animations */
 

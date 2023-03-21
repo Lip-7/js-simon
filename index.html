@@ -22,12 +22,12 @@
             <div id="main-game" class="main-game d-none">
                 <div id="gameGuess" class="inputs d-flex flex-column justify-content-center align-items-center gap-3">
                     <h2>Well now write the numbers that you remember</h2>
-                    <input type="text">
+                    <input type="text" placeholder="es. 10 5 30 65 87">
                     <button id="btnGuess" class="btn btn-warning">Submit</button>
                 </div>
                 <div id="gameResult" class="result text-center mt-3 d-none">
-                    <h2>Oh you guessed <span></span> numbers out of 5</h2>
-                    <p></p>
+                    <h2>Oh you guessed <span id="numbersGuessed"></span> numbers out of 5</h2>
+                    <p class="d-flex justify-content-center gap-4" id="numbersEntered"></p>
                 </div>
             </div>
         </div>

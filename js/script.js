@@ -9,9 +9,31 @@ document.getElementById('btn-start').addEventListener('click', () => {
     setTimeout(() => {
         switchVisibility('startGame', 'main-game');
     }, 1000);
-    guessingTime();
+    guessingTime(pcNumbers);
+
 });
 
-function guessingTime() {
-    document.getElementById('btnGuess').addEventListener('click', () => switchVisibility('gameResult'))
+function guessingTime(correctArray) {
+    document.getElementById('btnGuess').addEventListener('click', () => {
+        switchVisibility('gameResult')
+        let counterArray = []
+        const userNums = document.querySelector('input').value.split(' ')
+        for (let numb of userNums){
+            numb = parseInt(numb)
+            if (correctArray.includes(numb)) {
+                counterArray.push(numb);
+            }
+        }
+        document.getElementById('numbersGuessed').innerHTML = counterArray.length
+        for (let i = 0; i < correctArray.length; i++) {
+            const singleNumber = document.createElement('span')
+            if (counterArray.includes(correctArray[i])) {
+                singleNumber.classList.add('correct')
+            }else{
+                singleNumber.classList.add('wrong')
+            }
+            singleNumber.innerText = correctArray[i]
+            document.getElementById('numbersEntered').appendChild(singleNumber)
+        }
+    })
 }
