@@ -79,7 +79,8 @@ function generateElementsByArray(elementType, content, wrapper){
   wrapper.appendChild(singleElement);
 }
 function guessingTime(correctArray) {
-  document.getElementById('btnGuess').addEventListener('click', () => {
+  document.getElementById('guessForm').addEventListener('submit', (e) => {
+      e.preventDefault();
       switchVisibility('gameResult')
       let counterArray = []
       const userNums = document.querySelector('input').value.split(' ')
