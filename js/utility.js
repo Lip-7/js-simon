@@ -82,6 +82,7 @@ function guessingTime(correctArray) {
   document.getElementById('guessForm').addEventListener('submit', (e) => {
       e.preventDefault();
       switchVisibility('gameResult')
+      switchVisibility('btnGuess')
       let counterArray = []
       const userNums = document.querySelector('input').value.split(' ')
       for (let numb of userNums){
